@@ -1,0 +1,60 @@
+body
+{
+    background-image: url("/static/imgs/we.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+}
+h1
+{
+    font-size: 60px;
+    text-align: center;
+    color:white;
+    font-family:cursive;
+}
+.aa
+{
+    margin-left: 230px;
+    width: 1000px;
+    height: 105px;
+    text-align: left;
+}
+.aa input[type ="text"]{
+    outline: 0;
+    margin-left: 78px;
+    border-radius: translate(-50%,50%);
+    border-color: red;
+    padding: 9px 60px;
+    width: 300px;
+    outline: none;
+} 
+.aa input[type ="submit"]{
+    border: none;
+    background: none;
+    margin-left: 90px;
+    border: 2px solid red;
+    padding: 13px 13px;
+    width: 130px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    cursor: pointer;
+} 
+.aa input[type ="submit"]:hover{
+    background: red;
+}
+.container
+{
+    margin-left: 412px;
+    display: block;
+    color: black;
+    text-align: center;
+    height: 415px;
+    width: 481px;
+    background-color: white;
+}
+.icon
+{
+  height: 92px;
+    background-color: black;
+}

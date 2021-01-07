@@ -1,0 +1,39 @@
+{% load static %}
+{% static 'imgs' as base_url %}
+<html>
+    <head>
+        <title> welcome to my weatherapp</title>
+        <link rel='stylesheet' href="{% static 'css/style.css' %}">  
+    
+    <h1> Get current Weather... </h1>
+    </head>
+    
+    <body>
+        
+        <form method='post' class='aa' action="#"> 
+            {% csrf_token %}
+            <input type='text' placeholder='Enter city' required/ name ="city"> 
+            <input type='text' placeholder='Enter country' required/ id ="country">
+            <input type='submit' value ='Get Weather'> 
+            
+        </form>
+    
+        {% ifequal city_data.city "None" %}
+          <p> Hello</p>
+        {% endifequal %}
+        <div class='container' id='dis' style="background-color: orangered;border-radius: 20px;">
+          
+            <h2> Weather </h2>
+            <img src="{{base_url}}/{{city_data.icon}}.png" class='icon' style="background-color: orangered"> 
+            <p id ='pr' style="font-size: 45"> {{city_data.temperature}}°C </p>
+            <p1 style="font-size: 25"> {{city_data.city}}</p1> <br>
+            <p1 style="font-size: 25"> {{city_data.description}}</p1> <br>
+            <p1> min : <big>{{city_data.mintemp}}°</big> C </p1> <br>
+            <p2> max: <big>{{city_data.maxtemp}}° </big> C </p2>
+            
+        </div>
+        
+    
+    </body>
+        
+</html>
